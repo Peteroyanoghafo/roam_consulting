@@ -1,0 +1,510 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serif;
+    /* font-family: 'Big Shoulders Display', cursive; */
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+header{
+    background-color: rgba(105, 102, 102, .7);
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 100px;
+    margin-bottom: 0;
+}
+.nav_logo{
+    font-size: 2rem;
+    margin: 0 20px;
+    text-decoration: none;
+    color: #fff;
+}
+.nav_logo:hover{
+    color: black;
+    transition: .9s ease-in-out;
+}
+.nav_links:hover{
+    color: black;
+    transition: .9s ease-in-out;
+}
+
+.nav_menu{
+    display: flex;
+
+}
+.nav_items{
+    list-style: none;
+    margin: 0 15px;
+}
+.nav_links{
+    color: #fff;
+    text-decoration: none;
+    transition: .7s ease
+}
+.hamburger{
+    display:none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background-color: #fff;
+}
+
+
+/* SMALL SCREENS */
+@media (max-width:768px) {
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    header{
+        background-color: #000;
+    }
+    .nav_logo{
+        color: #fff;
+    }
+    .nav_menu{
+        position: fixed;
+        top: 110px;
+        left: -100%;
+        flex-direction: column;
+        background-color: #333;
+        width: 100%;
+        text-align:left;
+        transition: .3s;
+        padding-inline-start: 0;
+    }
+    .nav_items{
+        margin: 10px 0;
+        padding: 10px 10px 10px 50px;
+        width: 100%;
+    }
+    .nav_items:hover{
+        background-color: gray;
+    }
+    .nav_menu.active{
+        left: 0;
+    }
+    .navbar{
+        flex-direction: column;
+        padding: 10px;
+        margin-bottom: 0;
+    }
+    .nav_logo{
+        padding: 15px;
+    }
+    .nav_links{
+        color: #fff;
+        font-size: 1.1rem;
+    }
+}
+/* MEDIUM SCREENS */
+@media (max-width:1015px) and (min-width:768px) {
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    header{
+        background-color: #000;
+    }
+    .nav_logo{
+        color: #fff;
+    }
+    .nav_menu{
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        flex-direction: column;
+        background-color: #333;
+        width: 40%;
+        text-align:left;
+        transition: .3s;
+        padding-inline-start: 0%;
+        margin-left: 60%;
+        
+    }
+    .nav_items{
+        margin: 10px 0;
+        padding: 10px 10px 10px 40px;
+        width: 100%;
+    }
+    .nav_items:hover{
+        background-color: rgba(172, 166, 166, 0.9);
+    }
+    .nav_menu.active{
+        left: 0;
+    }
+    .navbar{
+        flex-direction: row;
+        padding: 10px;
+        margin: 0;
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+    .nav_logo{
+        padding: 15px;
+    }
+    .nav_links{
+        color: #fff;
+        font-size: 1.1rem;
+    }
+}
+
+/* BODY */
+#section1{
+    background-color:rgb(96, 201, 82);
+    background-image: url(bg-desktop.png);
+    padding: 50px;
+    margin: 0;
+    height: 40%;
+}
+hr.first{
+    width: 40%;
+}
+#front_txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin: 10% 10%;
+}
+#front_txt p{
+    font-size: 1.1rem;
+}
+#front_txt h2{
+    font-size: 3rem;
+    margin: 0;
+}
+.learnMore_btn{
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+.learnMore_btn:hover{
+    background-color: rgba(82, 201, 82, .7);
+}
+#section2{
+    /* height: 40%; */
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+.part-1{
+    width: 20%;
+    padding: 20px;
+}
+.part-2{
+    width: 20%;
+    padding: 20px;
+}
+.part-3{
+    width: 20%;
+    padding: 20px;
+
+}
+.part-4{
+    width: 20%;
+    padding: 20px;
+}
+.learnMore{
+    color: rgb(255, 153, 0);
+}
+#section3{
+    background-color: rgb(129, 127, 127);
+    /* height: 40%; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    padding: 30px;
+    margin: 0;
+    color: white;
+}
+.boxes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.box1{
+    padding: 20px;
+    background-color: rgb(94, 92, 92);
+    color: white;
+    margin-right: 10px;
+    width: 100%;
+    text-align: center;
+}
+.box_btn{
+    padding: 10px;
+    border: 1px solid rgb(240, 140, 104);
+    background-color: transparent;
+}
+.box_btn:hover{
+    background-color: rgb(240, 140, 104);
+}
+.box2{
+    padding: 20px;
+    background-color: rgb(94, 92, 92);
+    color: white;
+    margin-left: 10px;
+    width: 100%;
+    text-align: center;
+
+}
+hr.second{
+    width: 100%;
+    border: 1px solid rgb(240, 140, 104);
+}
+#section4{
+    background-color: rgb(160, 156, 156);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+.linkedin{
+    margin: 5px;
+    height: 30px;
+    width: 30px;
+}
+.fb{
+    margin: 5px;
+    height: 30px;
+    width: 30px;
+}
+.twitter{
+    margin: 5px;
+    height: 30px;
+    width: 30px;
+}
+#section5{
+    background-color: rgb(129, 127, 127);
+    display: flex;
+    padding: 50px;
+    color: white;
+}
+.aboutUs{
+    width: 50%;
+    margin-right: 40px;
+}
+.whatWeDo{
+    width: 50%;
+    margin-right: 40px;
+}
+.whatWeDo li{
+    list-style-type:circle;
+}
+.headOffice{
+    width: 50%;
+    margin-right: 40px;
+}
+.beninOffice{
+    width: 50%
+}
+footer{
+    padding: 30px;
+    padding-left: 40px;
+    color: white;
+    background-color: black;
+    font-size: 1.1rem;
+}
+.fa-brands{
+    font-size: 3rem;
+    margin: 10px;
+    color: white;
+}
+.fa-solid{
+    color: rgb(240, 140, 104);
+}
+.outsourcing,.consulting,.recuitment,.humanCapitalDev{
+    width: 120px;
+    height: 100px;
+    margin-left: 20px;
+}
+
+/* MEDIUM SCREENS */
+@media (max-width:1015px) and (min-width:768px) {
+    #section1{
+        background-color:rgb(96, 201, 82);
+        background-image: url(bg-desktop.png);
+        padding: 30px;
+        margin: 0;
+        /* height: 40%; */
+    }
+    #section2{
+        width: 100%;
+        background-color: white;
+        justify-content: space-between;
+        padding: 30px;
+        font-size: .8rem;
+    }
+    .outsourcing,.consulting,.recuitment,.humanCapitalDev{
+        width: 100px;
+        height: 80px;
+        margin: 0;
+    }
+    #section5{
+        background-color: rgb(129, 127, 127);
+        display: flex;
+        padding: 50px;
+        color: white;
+        font-size: .8rem;
+    }
+  
+}
+
+/* SMALL SCREENS */
+@media (max-width:768px) {
+    #section1{
+        background-color:rgb(96, 201, 82);
+        background-image: url(bg-desktop.png);
+        padding: 20px;
+        margin: 0;
+        /* height: 40%; */
+    }
+    #front_txt p{
+        font-size: 1rem;
+    }
+    #front_txt h2{
+        font-size: 2rem;
+        margin: 0;
+    }
+    .learnMore_btn{
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid white;
+    }
+    #section2{
+        width: 100%;
+        background-color: white;
+        font-size: .8rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .part-1{
+        width: 90%;
+        margin: auto;
+    }
+    .part-2{
+        width: 90%;
+        margin: auto;
+    }
+    .part-3{
+        width: 90%;
+        margin: auto;
+    
+    }
+    .part-4{
+        width: 90%;
+        margin: auto;
+    }
+
+    .outsourcing,.consulting,.recuitment,.humanCapitalDev{
+        width: 90px;
+        height: 70px;
+        margin: 0;
+    }
+    #section3{
+        background-color: rgb(129, 127, 127);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+        padding: 30px;
+        margin: 0;
+        color: white;
+    }
+    .boxes{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .box1{
+        padding: 20px;
+        background-color: rgb(94, 92, 92);
+        color: white;
+        margin: auto;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .box2{
+        padding: 20px;
+        background-color: rgb(94, 92, 92);
+        color: white;
+        margin: auto;
+        width: 100%;
+        text-align: center;
+    
+    }
+    .box_btn{
+        padding: 10px;
+        border: 1px solid rgb(240, 140, 104);
+        background-color: transparent;
+    }
+    #section5{
+        background-color: rgb(129, 127, 127);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px;
+        color: white;
+        font-size: .8rem;
+        /* margin: 0; */
+    }
+    .aboutUs{
+        width: 60%;
+        /* margin-right: 40px; */
+    }
+    .whatWeDo{
+        width: 60%;
+        /* margin-right: 40px; */
+    }
+    .whatWeDo li{
+        list-style-type:circle;
+    }
+    .headOffice{
+        width: 60%;
+        /* margin-right: 40px; */
+    }
+    .beninOffice{
+        width: 60%;
+        margin: 0;
+    }
+    footer{
+        padding: 20px;
+        padding-left: 30px;
+        color: white;
+        background-color: black;
+        font-size: 1rem;
+    }
+}
